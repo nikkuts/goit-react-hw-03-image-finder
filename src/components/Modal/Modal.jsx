@@ -7,9 +7,9 @@ class Modal extends Component {
   onCloseModal = () => this.props.onClick();
 
   render () {
-    {document.addEventListener("keydown", ({code}) => {
-      code === 'Escape' && this.onCloseModal();
-    })};
+    // {document.addEventListener("keydown", ({code}) => {
+    //   code === 'Escape' && this.onCloseModal();
+    // })};
 
     return (
         <div className={css.overlay} onClick={this.onCloseModal}>
