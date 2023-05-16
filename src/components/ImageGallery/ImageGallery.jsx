@@ -9,7 +9,7 @@ class ImageGallery extends Component {
   state = {
     images: [],
     isLoading: false,
-    error: null,
+    error: null
   };
 
   async componentDidUpdate(prevProps) {
