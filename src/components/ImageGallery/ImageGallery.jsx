@@ -25,7 +25,7 @@ class ImageGallery extends Component {
           alert("Sorry, there are no images matching your search query. Please try again.");
         return;
         }
-        this.setState( {images: data.hits} ); 
+        this.setState( {images: [...this.state.images, ...data.hits]} ); 
       } 
       catch (error) {
         alert("ERROR Sorry, there are no images matching your search query. Please try again."); 
@@ -45,7 +45,7 @@ class ImageGallery extends Component {
           alert("We're sorry, but you've reached the end of search results.");
           return;   
       }
-        this.setState( {images: data.hits} ); 
+        this.setState( {images: [...this.state.images, ...data.hits]} ); 
       } 
       catch (error) {
         alert("ERROR Sorry, there are no images matching your search query. Please try again."); 
