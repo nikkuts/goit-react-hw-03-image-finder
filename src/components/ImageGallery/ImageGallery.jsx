@@ -9,7 +9,7 @@ class ImageGallery extends Component {
   state = {
     images: [],
     isLoading: false,
-    error: null
+    error: null,
   };
 
   async componentDidUpdate(prevProps) {
@@ -25,7 +25,7 @@ class ImageGallery extends Component {
           alert("Sorry, there are no images matching your search query. Please try again.");
         return;
         }
-        this.setState( {images: [...this.state.images, ...data.hits]} ); 
+        this.setState( {images: data.hits} ); 
       } 
       catch (error) {
         alert("ERROR Sorry, there are no images matching your search query. Please try again."); 
